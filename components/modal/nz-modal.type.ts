@@ -30,6 +30,7 @@ export interface ModalOptions<T = any, R = any> { // tslint:disable-line:no-any
   nzGetContainer?: HTMLElement | OverlayRef | (() => HTMLElement | OverlayRef); // STATIC
   nzAfterOpen?: EventEmitter<void>;
   nzAfterClose?: EventEmitter<R>;
+  draggable?: boolean;
 
   // --- Predefined OK & Cancel buttons
   nzOkText?: string;

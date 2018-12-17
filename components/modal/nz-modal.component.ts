@@ -55,6 +55,7 @@ export class NzModalComponent<T = any, R = any> extends NzModalRef<T, R> impleme
 
   // tslint:disable-next-line:no-any
   locale: any = {};
+  @Input() draggable: boolean = false;
   @Input() nzModalType: ModalType = 'default';
   @Input() nzContent: string | TemplateRef<{}> | Type<T>; // [STATIC] If not specified, will use <ng-content>
   @Input() nzComponentParams: T; // [STATIC] ONLY avaliable when nzContent is a component

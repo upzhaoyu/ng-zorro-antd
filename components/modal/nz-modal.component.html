@@ -24,7 +24,18 @@
       [style.transform-origin]="transformOrigin"
       role="document"
     >
-      <div class="ant-modal-content">
+      <div class="ant-modal-content" *ngIf="draggable" CDDraggable>
+        <button *ngIf="nzClosable" (click)="onClickCloseBtn()" class="ant-modal-close" aria-label="Close">
+          <span class="ant-modal-close-x">
+            <i nz-icon type="close" class="ant-modal-close-icon"></i>
+          </span>
+        </button>
+        <ng-container [ngSwitch]="true">
+          <ng-container *ngSwitchCase="isModalType('default')" [ngTemplateOutlet]="tplContentDefault"></ng-container>
+          <ng-container *ngSwitchCase="isModalType('confirm')" [ngTemplateOutlet]="tplContentConfirm"></ng-container>
+        </ng-container>
+      </div>
+      <div class="ant-modal-content" *ngIf="!draggable">
         <button *ngIf="nzClosable" (click)="onClickCloseBtn()" class="ant-modal-close" aria-label="Close">
           <span class="ant-modal-close-x">
             <i nz-icon type="close" class="ant-modal-close-icon"></i>

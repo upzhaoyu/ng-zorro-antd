@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class NzDemoModalBasicComponent {
-  isVisible = false;
+  isVisible = true;
 
   constructor() {}
 

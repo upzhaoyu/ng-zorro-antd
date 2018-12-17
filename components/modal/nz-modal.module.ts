@@ -7,6 +7,7 @@ import { LoggerModule } from '../core/util/logger/logger.module';
 import { NzI18nModule } from '../i18n/nz-i18n.module';
 import { NzIconModule } from '../icon/nz-icon.module';
 
+import { MakeDraggableDirective } from './cd-interactjs';
 import { CssUnitPipe } from './css-unit.pipe';
 import { NzModalControlService } from './nz-modal-control.service';
 import { NzModalComponent } from './nz-modal.component';
@@ -15,7 +16,7 @@ import { NzModalService } from './nz-modal.service';
 @NgModule({
   imports        : [ CommonModule, OverlayModule, NzI18nModule, NzButtonModule, LoggerModule, NzIconModule ],
   exports        : [ NzModalComponent ],
-  declarations   : [ NzModalComponent, CssUnitPipe ],
+  declarations   : [ NzModalComponent, CssUnitPipe, MakeDraggableDirective ],
   entryComponents: [ NzModalComponent ],
   providers      : [ NzModalControlService, NzModalService ]
 })

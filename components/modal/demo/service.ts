@@ -17,7 +17,7 @@ import { NzModalRef, NzModalService } from 'ng-zorro-antd';
       <span>Title Template</span>
     </ng-template>
     <ng-template #tplContent>
-      <p>some contents...</p>
+      <p>some contents.sfdsfsdfsdfsdf..</p>
       <p>some contents...</p>
       <p>some contents...</p>
       <p>some contents...</p>
@@ -69,6 +69,7 @@ export class NzDemoModalServiceComponent {
       nzFooter: tplFooter,
       nzMaskClosable: false,
       nzClosable: false,
+      draggable: true,
       nzOnOk: () => console.log('Click ok')
     });
   }
@@ -83,6 +84,7 @@ export class NzDemoModalServiceComponent {
 
   createComponentModal(): void {
     const modal = this.modalService.create({
+      draggable: true,
       nzTitle: 'Modal Title',
       nzContent: NzModalCustomComponent,
       nzComponentParams: {
